@@ -1,6 +1,8 @@
 import { type ReactNode } from "react";
 
 import { Header } from "@/ui/components/Header";
+import Footer from "@/ui/components/Footer";
+import FooterSub from "@/ui/components/FooterSub";
 
 export const metadata = {
 	title: "Saleor Storefront example",
@@ -15,11 +17,13 @@ export default async function RootLayout(props: {
 
 	return (
 		<>
-			<Header  />
+			<Header />
 			<div className="flex min-h-[calc(100dvh-64px)] flex-col">
 				<main className="flex-1">{props.children}</main>
 				{/* <Footer channel={channel} /> */}
 			</div>
+			<Footer />
+			<FooterSub />
 		</>
 	);
 }

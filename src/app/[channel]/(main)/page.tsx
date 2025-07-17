@@ -1,8 +1,12 @@
 import { ProductListByCollectionDocument } from "@/gql/graphql";
 import { executeGraphQL } from "@/lib/graphql";
 import ConoceSection from "@/ui/components/ConoceSection";
+import DestacadosSection from "@/ui/components/DestacadosSection";
+
 import HeroSection from "@/ui/components/HeroSection";
 import PromocionesSection from "@/ui/components/PromocionesSection";
+import ShakesSection from "@/ui/components/ShakesSection";
+import ZoatesSection from "@/ui/components/ZoatesSection";
 
 
 export const metadata = {
@@ -34,6 +38,10 @@ export default async function Page(props: { params: Promise<{ channel: string }>
             <HeroSection />
 			<PromocionesSection />
 			<ConoceSection />
+			<ShakesSection />
+			<DestacadosSection />
+			<ZoatesSection />
+		
 
 		</section>
 	);

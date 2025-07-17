@@ -2,6 +2,8 @@
 	"$schema": "https://json.schemastore.org/tsconfig.json",
 	"compilerOptions": {
 		"target": "ES2022",
+		"typeRoots": ["./types", "./node_modules/@types"],
+		"baseUrl": ".",
 		"lib": ["dom", "dom.iterable", "esnext"],
 		"allowJs": true,
 		"skipLibCheck": true,

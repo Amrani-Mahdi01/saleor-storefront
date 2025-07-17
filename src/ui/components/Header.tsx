@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export function Header() {
-		const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	return (
 		<header className=" relative">
 			<div className="container  mx-auto px-3 md:px-1 ">
@@ -119,14 +119,21 @@ export function Header() {
 							</svg>
 						</div>
 
-						<div className="   cursor-pointer  mt-2  2xl:mt-0 hover:fill-[#B92727] hover:text-[#B92727] ">
+						<div className="   mt-2  cursor-pointer  hover:fill-[#B92727] hover:text-[#B92727] 2xl:mt-0 ">
 							<span className="text-sm font-semibold">ZOOMADBOT</span>
 						</div>
 					</div>
 
 					<div className="flex items-center gap-5 ">
 						<div className="block cursor-pointer xl:hidden ">
-							<svg onClick={() => setIsMenuOpen((prev) => !prev)} width="23" height="16" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg
+								onClick={() => setIsMenuOpen((prev) => !prev)}
+								width="23"
+								height="16"
+								viewBox="0 0 19 13"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
 								<path
 									d="M1.47022 2.66H17.3102C17.9702 2.66 18.5502 2.08 18.5502 1.42C18.5502 0.760004 17.9702 0.160004 17.3102 0.160004H1.47022C0.810225 0.160004 0.230225 0.740004 0.230225 1.42C0.230225 2.1 0.810225 2.66 1.47022 2.66ZM1.47022 7.66H17.3102C17.9702 7.66 18.5502 7.08 18.5502 6.42C18.5502 5.76 17.9702 5.16 17.3102 5.16H1.47022C0.810225 5.16 0.230225 5.74 0.230225 6.42C0.230225 7.1 0.810225 7.66 1.47022 7.66ZM1.47022 12.66H17.3102C17.9702 12.66 18.5502 12.08 18.5502 11.42C18.5502 10.76 17.9702 10.16 17.3102 10.16H1.47022C0.810225 10.16 0.230225 10.74 0.230225 11.42C0.230225 12.1 0.810225 12.66 1.47022 12.66Z"
 									fill="#1F2124"
@@ -153,10 +160,15 @@ export function Header() {
 					</div>
 				</div>
 			</div>
-			<div className={`absolute left-0 top-full w-full flex-col gap-5 bg-red-500 py-5 transition-all duration-300 ${
+			<div
+				className={`absolute left-0 top-full z-[9999]  w-full flex-col items-center gap-5 bg-white py-5 transition-all duration-300 ${
 					isMenuOpen ? "flex" : "hidden"
-				} xl:hidden`}>
-				<div className="flex cursor-pointer items-center gap-2 hover:fill-[#B92727]  hover:text-[#B92727] ">
+				} xl:hidden`}
+			>
+				<Link
+					href={"/"}
+					className="flex cursor-pointer items-center gap-2 hover:fill-[#B92727]  hover:text-[#B92727] "
+				>
 					<span className="text-sm font-semibold">PRE-ENTRENOS</span>
 
 					<svg
@@ -169,7 +181,141 @@ export function Header() {
 					>
 						<path d="M0.980844 0.25H8.01639C8.50311 0.25 8.74647 0.837891 8.40194 1.18242L4.88553 4.70156C4.67225 4.91484 4.32499 4.91484 4.1117 4.70156L0.595297 1.18242C0.250766 0.837891 0.494126 0.25 0.980844 0.25Z" />
 					</svg>
-				</div>
+				</Link>
+
+			
+				<Link
+					href={"/"}
+					className="flex cursor-pointer items-center gap-2 hover:fill-[#B92727]  hover:text-[#B92727] "
+				>
+					<span className="text-sm font-semibold">PROTEÍNAS</span>
+
+					<svg
+						className="fill-current"
+						width="9"
+						height="5"
+						viewBox="0 0 9 5"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path d="M0.980844 0.25H8.01639C8.50311 0.25 8.74647 0.837891 8.40194 1.18242L4.88553 4.70156C4.67225 4.91484 4.32499 4.91484 4.1117 4.70156L0.595297 1.18242C0.250766 0.837891 0.494126 0.25 0.980844 0.25Z" />
+					</svg>
+				</Link>
+
+				<Link
+					href={"/"}
+					className="flex cursor-pointer items-center gap-2 hover:fill-[#B92727]  hover:text-[#B92727] "
+				>
+					<span className="text-sm font-semibold">AMINOÁCIDOS</span>
+
+					<svg
+						className="fill-current"
+						width="9"
+						height="5"
+						viewBox="0 0 9 5"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path d="M0.980844 0.25H8.01639C8.50311 0.25 8.74647 0.837891 8.40194 1.18242L4.88553 4.70156C4.67225 4.91484 4.32499 4.91484 4.1117 4.70156L0.595297 1.18242C0.250766 0.837891 0.494126 0.25 0.980844 0.25Z" />
+					</svg>
+				</Link>
+
+				<Link
+					href={"/"}
+					className="flex cursor-pointer items-center gap-2 hover:fill-[#B92727]  hover:text-[#B92727] "
+				>
+					<span className="text-sm font-semibold">PUROS</span>
+
+					<svg
+						className="fill-current"
+						width="9"
+						height="5"
+						viewBox="0 0 9 5"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path d="M0.980844 0.25H8.01639C8.50311 0.25 8.74647 0.837891 8.40194 1.18242L4.88553 4.70156C4.67225 4.91484 4.32499 4.91484 4.1117 4.70156L0.595297 1.18242C0.250766 0.837891 0.494126 0.25 0.980844 0.25Z" />
+					</svg>
+				</Link>
+
+				<Link
+					href={"/"}
+					className="flex cursor-pointer items-center gap-2 hover:fill-[#B92727]  hover:text-[#B92727] "
+				>
+					<span className="text-sm font-semibold">AVENA / GAINERS</span>
+
+					<svg
+						className="fill-current"
+						width="9"
+						height="5"
+						viewBox="0 0 9 5"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path d="M0.980844 0.25H8.01639C8.50311 0.25 8.74647 0.837891 8.40194 1.18242L4.88553 4.70156C4.67225 4.91484 4.32499 4.91484 4.1117 4.70156L0.595297 1.18242C0.250766 0.837891 0.494126 0.25 0.980844 0.25Z" />
+					</svg>
+				</Link>
+
+				<Link
+					href={"/"}
+					className="flex cursor-pointer items-center gap-2 hover:fill-[#B92727]  hover:text-[#B92727] "
+				>
+					<span className="text-sm font-semibold">CAPS</span>
+
+					<svg
+						className="fill-current"
+						width="9"
+						height="5"
+						viewBox="0 0 9 5"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path d="M0.980844 0.25H8.01639C8.50311 0.25 8.74647 0.837891 8.40194 1.18242L4.88553 4.70156C4.67225 4.91484 4.32499 4.91484 4.1117 4.70156L0.595297 1.18242C0.250766 0.837891 0.494126 0.25 0.980844 0.25Z" />
+					</svg>
+				</Link>
+
+				<Link
+					href={"/"}
+					className="flex cursor-pointer items-center gap-2 hover:fill-[#B92727]  hover:text-[#B92727] "
+				>
+					<span className="text-sm font-semibold">ALL IN</span>
+
+					<svg
+						className="fill-current"
+						width="9"
+						height="5"
+						viewBox="0 0 9 5"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path d="M0.980844 0.25H8.01639C8.50311 0.25 8.74647 0.837891 8.40194 1.18242L4.88553 4.70156C4.67225 4.91484 4.32499 4.91484 4.1117 4.70156L0.595297 1.18242C0.250766 0.837891 0.494126 0.25 0.980844 0.25Z" />
+					</svg>
+				</Link>
+
+				<Link
+					href={"/"}
+					className="flex cursor-pointer items-center gap-2 hover:fill-[#B92727]  hover:text-[#B92727] "
+				>
+					<span className="text-sm font-semibold">APPAREL</span>
+
+					<svg
+						className="fill-current"
+						width="9"
+						height="5"
+						viewBox="0 0 9 5"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path d="M0.980844 0.25H8.01639C8.50311 0.25 8.74647 0.837891 8.40194 1.18242L4.88553 4.70156C4.67225 4.91484 4.32499 4.91484 4.1117 4.70156L0.595297 1.18242C0.250766 0.837891 0.494126 0.25 0.980844 0.25Z" />
+					</svg>
+				</Link>
+
+				<Link
+					href={"/"}
+					className="flex cursor-pointer items-center gap-2 hover:fill-[#B92727]  hover:text-[#B92727] "
+				>
+					<span className="text-sm font-semibold">ZOOMADBOT</span>
+				</Link>
 			</div>
 		</header>
 	);
